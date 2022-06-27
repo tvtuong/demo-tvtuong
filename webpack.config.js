@@ -2,39 +2,39 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {
-    entry: './src/index.js',
-  },
-  output: {
-    path: path.join(__dirname, '/dist'), // the bundle output path
-    filename: 'bundle.js', // the name of the bundle
+  entry: './src/index.js',
+  output: { path: path.join(__dirname, 'build'), filename: 'index.bundle.js' },
+  mode: process.env.NODE_ENV || 'development',
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html', // to import index.html file inside index.js
+      template: path.join(__dirname, 'src', 'index.html'),
     }),
   ],
   devServer: {
     port: 8080, // you can change the port
   },
-  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, // .js and .jsx files
-        exclude: /node_modules/, // excluding the node_modules folder
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
       },
       {
-        test: /\.(sa|sc|c)ss$/, // styles files
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/, // to import images and fonts
-        loader: 'url-loader',
-        options: { limit: false },
+        test: /\.(css|scss)$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        use: ['file-loader'],
       },
     ],
   },
