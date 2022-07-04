@@ -1,9 +1,9 @@
 import React from 'react';
-interface Props {
+declare interface Props {
   title: string;
   value: number;
   isIcon?: boolean;
-  onClick?:() => void;
+  onClick?: () => void;
 }
 const BaseBadge: React.FC<Props> = (props) => {
   return (

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
 const USDtoVND = function (props: any) {
   const convert = function (usd: any) {
@@ -43,7 +43,7 @@ const VNDtoUSD = function (props: any) {
     </div>
   );
 };
-export default class Render extends React.Component<{}, { usd: number, vnd: number }> {
+export default class Render extends React.Component<{}, { usd: number; vnd: number }> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -53,13 +53,29 @@ export default class Render extends React.Component<{}, { usd: number, vnd: numb
   }
   handleChange = (data: any) => {
     this.setState(data);
-  }
+  };
   render() {
     return (
-      <div className='m-3'>
+      <div className="m-3">
         <USDtoVND onHandleChange={this.handleChange} value={this.state.usd} />
         <VNDtoUSD onHandleChange={this.handleChange} value={this.state.vnd} />
       </div>
-    )
+    );
   }
 }
+
+// const Render: React.FC = () => {
+//   const [usd, setUSD] = useState(0);
+//   const [vnd, setVND] = useState(0);
+//   const handleChange = () => {
+//     setUSD(usd);
+//     setVND(vnd);
+//   };
+//   return (
+//     <div className="m-3">
+//       <USDtoVND onHandleChange={handleChange} value={usd} />
+//       <VNDtoUSD onHandleChange={handleChange} value={vnd} />
+//     </div>
+//   );
+// };
+// export default Render;
