@@ -13,6 +13,7 @@ import RefComponent from './reactjs/refs';
 import { user, wrapInArray } from './typescript/typescript';
 import TypeScript from './typescript-react/TypeScript';
 import TS from './typescript-react';
+import TodoApp from './todo-react/todoApp';
 // import TicTacToe from "./tictactoe/index"
 type Props = {
   children?: React.ReactNode;
@@ -42,7 +43,8 @@ const App: React.FC = () => {
       {/* <button onClick={() => console.log(wrapInArray('xin chao'))}>Hihi</button> */}
       {/* <Comp children="Xin Chafo" /> */}
 
-      <TS />
+      {/* <TS /> */}
+      <TodoApp />
     </div>
   );
 };

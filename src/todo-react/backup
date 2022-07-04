@@ -1,0 +1,58 @@
+// import React from 'react';
+// import { ITask } from './interface';
+// import './styles.scss';
+// import TodoTask from './todos';
+
+// const TodoList: React.FC = () => {
+//   const [task, setTask] = React.useState('');
+//   const [deadline, setDeadline] = React.useState(0);
+//   const [todoList, setTodoList] = React.useState<ITask[]>([]);
+
+//   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+//     if (event.target.name === 'task') setTask(event.target.value);
+//   };
+
+//   const addTask = (): void => {
+//     if (task != '') {
+//       const newTask = { taskName: task };
+//       setTodoList([...todoList, newTask]);
+//       setTask('');
+//     }
+//   };
+
+//   const completeTask = (taskNameToDelete: string): void => {
+//     setTodoList(
+//       todoList.filter((task) => {
+//         return task.taskName != taskNameToDelete;
+//       })
+//     );
+//   };
+
+//   return (
+//     <div className="app_todo m-2 rounded-1">
+//       <div className="justify-content-center d-flex mt-5 mb-2">
+//         <h1>
+//           <b>Todos</b>
+//         </h1>
+//       </div>
+//       <div className="todo_list">
+//         {todoList.map((task: ITask, key: number) => {
+//           return (
+//             <div>
+//               <TodoTask key={key} task={task} completeTask={completeTask} />
+//               <div className="dot mx-auto"></div>
+//             </div>
+//           );
+//         })}
+//       </div>
+//       <div className="add-todo justify-content-center d-flex">
+//         <input className="add-todo__input" type="text" placeholder="Task ..." name="task" value={task} onChange={handleChange} />
+//         <button className="add-todo__btn" onClick={addTask}>
+//           +
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TodoList;
