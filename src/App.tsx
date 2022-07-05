@@ -13,7 +13,7 @@ import RefComponent from './reactjs/refs';
 import { user, wrapInArray } from './typescript/typescript';
 import TypeScript from './typescript-react/TypeScript';
 import TS from './typescript-react';
-// import TicTacToe from "./tictactoe/index"
+import { Counter } from './features/counters/counter';
 type Props = {
   children?: React.ReactNode;
 };
@@ -28,23 +28,47 @@ const App: React.FC = () => {
   const [value, setValue] = useState(20);
   return (
     <div className="App">
-      {/* Bootstrap */}
-      {/* <BaseBreadCrumb tab="Home" tab2="Detail" />
-      <BaseNotification title="Xin Chào" text={`Bạn có ${value} tin nhắn`} />
-    <BaseCard /> */}
-      {/* <BaseBadge title="Message" value={value} onClick={handleClick} /> */}
-      {/* ReactJS */}
-      {/* <SetState />
-      <HandlingEvent />
-    <RefComponent /> */}
-      {/* <Render /> */}
-      {/* <button onClick={() => console.log(user)}>Hehe</button> */}
-      {/* <button onClick={() => console.log(wrapInArray('xin chao'))}>Hihi</button> */}
-      {/* <Comp children="Xin Chafo" /> */}
-
-      <TS />
+      <Counter />
     </div>
   );
 };
 
 export default App;
+
+//back up
+
+{
+  /* Bootstrap */
+}
+{
+  /* <BaseBreadCrumb tab="Home" tab2="Detail" />
+      <BaseNotification title="Xin Chào" text={`Bạn có ${value} tin nhắn`} />
+    <BaseCard /> */
+}
+{
+  /* <BaseBadge title="Message" value={value} onClick={handleClick} /> */
+}
+{
+  /* ReactJS */
+}
+{
+  /* <SetState />
+      <HandlingEvent />
+    <RefComponent /> */
+}
+{
+  /* <Render /> */
+}
+{
+  /* <button onClick={() => console.log(user)}>Hehe</button> */
+}
+{
+  /* <button onClick={() => console.log(wrapInArray('xin chao'))}>Hihi</button> */
+}
+{
+  /* <Comp children="Xin Chafo" /> */
+}
+
+{
+  /* <TS /> */
+}
