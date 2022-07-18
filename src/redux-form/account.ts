@@ -2,7 +2,7 @@ import React from 'react';
 
 const LOAD = 'redux-form-examples/account/LOAD';
 
-const reducer = (state = {}, action: { type: any; data: any }) => {
+const reducer = (state = {}, action: any) => {
   switch (action.type) {
     case LOAD:
       return {

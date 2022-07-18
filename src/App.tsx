@@ -20,6 +20,7 @@ import SubmitValidationForm from './redux-form/SubmitValidationForm';
 import AsyncValidationForm from './redux-form/AsyncValidationForm';
 import InitializeFromStateForm from './redux-form/InitializeFromStateForm';
 import TestNemo from './nemo';
+import GameFunction from './gameCaro/Game';
 type Props = {
   children?: React.ReactNode;
 };
@@ -39,27 +40,7 @@ const App: React.FC = () => {
   const [value, setValue] = useState(20);
   return (
     <div className="App">
-      {/* <Counter /> */}
-      {/* <div style={{ padding: 15 }}>
-        <h2>Simple Form</h2>
-        <SyncValidationForm onSubmit={showResults} />
-      </div>
-      <div style={{ padding: 15 }}>
-        <h2>Submit Validation</h2>
-        <SubmitValidationForm onSubmit={showResults} />
-      </div>
-      <div style={{ padding: 15 }}>
-        <h2>Asynchronous Validation</h2>
-        <p>
-          Usernames that will <em>fail</em> validation: <code>john</code>, <code>paul</code>, <code>george</code> or <code>ringo</code>.
-        </p>
-        <AsyncValidationForm onSubmit={showResults} />
-      </div> */}
-      {/* <div style={{ padding: 15 }}>
-        <h2>Initialize From State</h2>
-        <InitializeFromStateForm onSubmit={showResults} />
-      </div> */}
-      <TestNemo />
+      <GameFunction />
     </div>
   );
 };
