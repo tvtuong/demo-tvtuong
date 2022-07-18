@@ -19,6 +19,7 @@ import SyncValidationForm from './redux-form/SyncValidation';
 import SubmitValidationForm from './redux-form/SubmitValidationForm';
 import AsyncValidationForm from './redux-form/AsyncValidationForm';
 import InitializeFromStateForm from './redux-form/InitializeFromStateForm';
+import TestNemo from './nemo';
 type Props = {
   children?: React.ReactNode;
 };
@@ -39,7 +40,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       {/* <Counter /> */}
-      <div style={{ padding: 15 }}>
+      {/* <div style={{ padding: 15 }}>
         <h2>Simple Form</h2>
         <SyncValidationForm onSubmit={showResults} />
       </div>
@@ -53,11 +54,12 @@ const App: React.FC = () => {
           Usernames that will <em>fail</em> validation: <code>john</code>, <code>paul</code>, <code>george</code> or <code>ringo</code>.
         </p>
         <AsyncValidationForm onSubmit={showResults} />
-      </div>
+      </div> */}
       {/* <div style={{ padding: 15 }}>
         <h2>Initialize From State</h2>
         <InitializeFromStateForm onSubmit={showResults} />
       </div> */}
+      <TestNemo />
     </div>
   );
 };
